@@ -1,4 +1,4 @@
-import '../../domain/repositories/ios_data_repository.dart';
+import '../../data/repositories/ios_data_repository.dart';
 import '../../core/platform/method_channel_service.dart';
 import '../../core/platform/event_channel_service.dart';
 

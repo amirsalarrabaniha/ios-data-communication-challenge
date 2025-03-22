@@ -1,4 +1,4 @@
-import '../repositories/ios_data_repository.dart';
+import '../../data/repositories/ios_data_repository.dart';
 
 class StartDataStream {
   final IOSDataRepository repository;
