@@ -1,16 +1,82 @@
-# zanis_sample
+# Flutter iOS Data Communication
 
-A new Flutter project.
+## 📌 Overview
 
-## Getting Started
+This project demonstrates communication between **Flutter** and **iOS** using `MethodChannel`
+and `EventChannel`. The app allows Flutter to send requests to iOS and receive real-time data
+streams.
 
-This project is a starting point for a Flutter application.
+## 🏗 Architecture
 
-A few resources to get you started if this is your first Flutter project:
+The project follows **Clean Architecture** and consists of:
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+- **Data Layer**: Handles communication with iOS.
+- **Domain Layer**: Manages business logic.
+- **Presentation Layer**: Uses `Bloc/Cubit` for state management.
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+## 🚀 Features
+
+- **MethodChannel** for sending commands from Flutter to iOS.
+- **EventChannel** for receiving real-time data streams.
+- **BLoC (Cubit)** for state management.
+- **get_it** for Dependency Injection.
+
+## 📂 Project Structure
+
+```
+lib/
+ ├── core/
+ │   ├── services/
+ │   │   ├── method_channel_service.dart
+ │   │   ├── event_channel_service.dart
+ │   └── di/
+ │       ├── service_locator.dart
+ ├── feature/
+ │   ├── ios_data/
+ │   │   ├── cubit/
+ │   │   │   ├── ios_data_cubit.dart
+ │   │   │   ├── ios_data_state.dart
+ │   │   ├── ui/
+ │   │   │   ├── ios_data_screen.dart
+ ├── main.dart
+```
+
+## 🛠 Setup & Installation
+
+1. **Clone the Repository**
+   ```sh
+   git clone https://github.com/your-repo/flutter-ios-communication.git
+   cd flutter-ios-communication
+   ```
+
+2. **Install Dependencies**
+   ```sh
+   flutter pub get
+   ```
+
+3. **Register Dependencies**
+   ```dart
+   setupLocator();
+   ```
+
+4. **Run the App**
+   ```sh
+   flutter run
+   ```
+
+## 🧪 Running Tests
+
+To run unit tests:
+
+```sh
+flutter test
+```
+
+## 📌 Key Technologies Used
+
+- **Flutter** (Dart)
+- **Swift** (iOS communication)
+- **MethodChannel & EventChannel**
+- **BLoC (Cubit)**
+- **get_it** (DI)
+- **Flutter Test & Bloc Test** (Testing)
