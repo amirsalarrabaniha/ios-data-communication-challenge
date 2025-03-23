@@ -72,6 +72,9 @@ To run unit tests:
 flutter test
 ```
 
+## 🎥 Video Demonstration
+Watch the project demo here: https://drive.google.com/file/d/1NtnIQ6vXikm7h2FaDrelu3YWv-tx3A01/view?usp=sharing
+
 ## 📌 Key Technologies Used
 
 - **Flutter** (Dart)
@@ -80,3 +83,5 @@ flutter test
 - **BLoC (Cubit)**
 - **get_it** (DI)
 - **Flutter Test & Bloc Test** (Testing)
+
+
