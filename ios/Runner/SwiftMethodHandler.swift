@@ -28,6 +28,7 @@ public class SwiftMethodHandler: NSObject, FlutterPlugin {
 }
 
 extension SwiftMethodHandler: FlutterStreamHandler {
+
     public func onListen(withArguments arguments: Any?, eventSink: @escaping FlutterEventSink) -> FlutterError? {
         self.eventSink = eventSink
         startSendingData()
@@ -38,7 +39,8 @@ extension SwiftMethodHandler: FlutterStreamHandler {
         stopSendingData()
         return nil
     }
-private func startSendingData() {
+
+    private func startSendingData() {
     timer = Timer.scheduledTimer(withTimeInterval: 2.0, repeats: true) { _ in
         let randomData = Int.random(in: 1...100)
         print("Sending data: \(randomData)")
